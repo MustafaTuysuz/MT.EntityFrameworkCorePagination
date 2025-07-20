@@ -12,7 +12,7 @@ public class PaginationResult<T>
         IsLastPage = pageNumber == TotalPages;
     }
 
-    public int PageNumber { get; set; }
+    public int PageNumber { get; set; } 
     public int PageSize { get; set; }
     public int TotalPages { get; set; }
     public IList<T> Items { get; set; }
