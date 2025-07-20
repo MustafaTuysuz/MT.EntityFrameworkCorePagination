@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>MT.EntityFrameworkCorePagination</Title>
+    <Authors>Mustafa Tüysüz</Authors>
+    <Company>KBMStudio</Company>
+    <Product>Pagination</Product>
+    <Description>ToPagedListAsync is a lightweight async pagination extension for IQueryable with Entity Framework Core. It returns the total count, page size, current page, paged data, and flags indicating whether it is the first or last page. Ideal for clean and efficient pagination in APIs or web apps.</Description>
+    <Copyright>Copyright 2025</Copyright>
+    <PackageIcon>Google-Noto-Emoji-Objects-62866-page-with-curl.128.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Google-Noto-Emoji-Objects-62866-page-with-curl.128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
