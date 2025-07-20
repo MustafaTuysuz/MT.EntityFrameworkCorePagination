@@ -1,29 +1,45 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Title>MT.EntityFrameworkCorePagination</Title>
-    <Authors>Mustafa Tüysüz</Authors>
-    <Company>KBMStudio</Company>
-    <Product>Pagination</Product>
-    <Description>ToPagedListAsync is a lightweight async pagination extension for IQueryable with Entity Framework Core. It returns the total count, page size, current page, paged data, and flags indicating whether it is the first or last page. Ideal for clean and efficient pagination in APIs or web apps.</Description>
-    <Copyright>Copyright 2025</Copyright>
-    <PackageIcon>Google-Noto-Emoji-Objects-62866-page-with-curl.128.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>MT.EntityFrameworkCorePagination</Title>
+		<Authors>Mustafa Tüysüz</Authors>
+		<Company>KBMStudio</Company>
+		<Product>Pagination</Product>
+		<Description>ToPagedListAsync is a lightweight async pagination extension for IQueryable with Entity Framework Core. It returns the total count, page size, current page, paged data, and flags indicating whether it is the first or last page. Ideal for clean and efficient pagination in APIs or web apps.</Description>
+		<Copyright>Copyright 2025</Copyright>
+		<PackageIcon>Google-Noto-Emoji-Objects-62866-page-with-curl.128.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/MustafaTuysuz/MT.EntityFrameworkCorePagination</RepositoryUrl>
+		<PackageTags>pagination pagedlist async entityframeworkcore efcore iqueryable extension-method dotnet tolistasync query-helpers paged-result .net csharp</PackageTags>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<ApplicationIcon>Google-Noto-Emoji-Objects-62866-page-with-curl.ico</ApplicationIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\Google-Noto-Emoji-Objects-62866-page-with-curl.128.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Google-Noto-Emoji-Objects-62866-page-with-curl.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\Google-Noto-Emoji-Objects-62866-page-with-curl.128.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>
